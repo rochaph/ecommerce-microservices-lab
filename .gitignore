@@ -1,0 +1,38 @@
+# Java / Maven / Gradle
+target/
+build/
+.gradle/
+*.class
+*.jar
+!**/gradle/wrapper/gradle-wrapper.jar
+!**/.mvn/wrapper/maven-wrapper.jar
+
+# Go
+*.exe
+*.test
+*.out
+bin/
+dist/
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+!*.example.tfvars
+crash.log
+
+# Ambiente e segredos
+.env
+.env.*
+!.env.example
+
+# IDEs e SO
+.idea/
+*.iml
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
