@@ -17,7 +17,7 @@ e consumo de memória pesam.
 
 ## Decisão
 
-Java 21 + Spring Boot 3 em `bff`, `users`, `orders`, `payments` e `inventory`. Go em `notifications`.
+Java 21 + Spring Boot 4 em `bff`, `users`, `orders`, `payments` e `inventory`. Go em `notifications`.
 
 ## Consequências
 

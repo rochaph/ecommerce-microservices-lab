@@ -38,7 +38,7 @@ autenticam usuários e são implantados.
 
 | Camada | Tecnologia |
 |---|---|
-| Serviços principais | Java 21, Spring Boot 3 |
+| Serviços principais | Java 21, Spring Boot 4 |
 | Serviço serverless | Go (AWS Lambda) |
 | Identidade | Keycloak (local), Amazon Cognito (AWS) |
 | Sessão | Spring Session + Redis |

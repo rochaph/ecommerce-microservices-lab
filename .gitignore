@@ -1,38 +1,136 @@
-# Java / Maven / Gradle
+# =====================================================================
+# Java / Spring Boot (Maven e Gradle)
+# =====================================================================
 target/
 build/
 .gradle/
+out/
 *.class
 *.jar
-!**/gradle/wrapper/gradle-wrapper.jar
+*.war
+*.ear
+hs_err_pid*.log
+replay_pid*.log
+# Wrappers precisam ser versionados
 !**/.mvn/wrapper/maven-wrapper.jar
+!**/gradle/wrapper/gradle-wrapper.jar
+# Saídas do Spring Boot
+spring-shell.log
+.attach_pid*
 
-# Go
+# =====================================================================
+# Go (notifications)
+# =====================================================================
 *.exe
+*.exe~
+*.dll
+*.so
+*.dylib
 *.test
 *.out
+coverage.*
+go.work
+go.work.sum
+# Binário da Lambda (runtime provided.al2023)
+bootstrap
 bin/
 dist/
 
-# Terraform
+# =====================================================================
+# AWS: SAM, Lambda e LocalStack
+# =====================================================================
+.aws-sam/
+samconfig.toml.bak
+**/lambda/*.zip
+.localstack/
+volume/
+
+# =====================================================================
+# Terraform / OpenTofu
+# =====================================================================
 .terraform/
+.terraform.lock.hcl.bak
 *.tfstate
 *.tfstate.*
-*.tfvars
-!*.example.tfvars
+*.tfplan
+tfplan
 crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+*.tfvars
+*.tfvars.json
+!*.example.tfvars
 
-# Ambiente e segredos
+# =====================================================================
+# Kubernetes / Helm / kind
+# =====================================================================
+**/charts/*.tgz
+**/charts/**/charts/
+kubeconfig
+*.kubeconfig
+
+# =====================================================================
+# Docker e dados locais dos containers (Postgres, Kafka, Redis, Keycloak)
+# =====================================================================
+docker-compose.override.yml
+compose.override.yml
+.data/
+**/data/postgres/
+**/data/kafka/
+**/data/redis/
+
+# =====================================================================
+# Segredos e variáveis de ambiente
+# =====================================================================
 .env
 .env.*
 !.env.example
+*.pem
+*.key
+*.p12
+*.jks
+!**/src/test/resources/**/*.jks
+secrets/
 
-# IDEs e SO
+# =====================================================================
+# IDEs e editores
+# =====================================================================
 .idea/
 *.iml
-.vscode/
+*.iws
+*.ipr
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.classpath
+.project
+.settings/
+.factorypath
+.sts4-cache/
+*.swp
+*~
+
+# =====================================================================
+# Sistema operacional
+# =====================================================================
 .DS_Store
 Thumbs.db
+desktop.ini
+*:Zone.Identifier
 
-# Logs
+# =====================================================================
+# Logs, relatórios e testes de carga
+# =====================================================================
 *.log
+logs/
+k6-results/
+*.hprof
+
+# =====================================================================
+# Claude Code (configurações pessoais)
+# =====================================================================
+.claude/settings.local.json
+CLAUDE.local.md
